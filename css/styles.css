@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: #333;
+}
+
+.framboesa-nick{
+    text-decoration: none;
+    color: #333;
+}
+
+.framboesa-nick:hover{
+    text-decoration: underline;
+    color: #f94eb0;
+}
+
+.moranguinho{
+    width: 400px; 
+    height: 400px;
+}
+
+/* Manter o cabeçalho fixo no topo da página */
+.header {
+    background-color: #f59ed8;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed; /* Fixa o cabeçalho no topo */
+    width: 100%; /* Garante que o cabeçalho ocupe toda a largura */
+    top: 0; /* Garante que o cabeçalho fique no topo */
+    left: 0; /* Garante que o cabeçalho fique alinhado à esquerda */
+    z-index: 1000; /* Garante que o cabeçalho fique sobre outros elementos */
+}
+
+/* Corrigir o espaçamento do conteúdo para não sobrepor o cabeçalho fixo */
+main {
+    margin-top: 70px; /* Ajuste o valor conforme a altura do cabeçalho */
+}
+
+.logo-site {
+    width: 200px;
+    margin: auto;
+    display: block;
+}
+
+.avatar-moranguinho{
+    width: 300px; 
+    height: 500px;
+}
+
+.avatar-limaozinho{
+    width: 400px; 
+    height: 600px;
+}
+
+.avatar-framboesa{
+    width: 400px; 
+    height: 500px;
+}
+.nav {
+    display: flex;
+    justify-content: center; /* Centraliza os links de navegação horizontalmente */
+}
+
+.nav ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    display: flex;
+    padding: 0;
+}
+
+.nav li {
+    margin-left: 20px; /* Espaçamento entre os links */
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.nav a:hover {
+    color: #f94eb0;
+    text-decoration: underline;
+    font-family: 'Nunito', sans-serif;
+}
+
+.section {
+    padding: 40px;
+    text-align: center;
+}
+
+.intro h1 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 18px;
+    color: #555;
+}
+
+.Flex-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(247, 225, 247, 0.658);
+    transition: transform 0.3s ease;
+}
+
+.box:hover {
+    transform: translateY(-10px);
+}
+
+.box h2 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.box p {
+    font-size: 16px;
+    color: #666;
+}
+
+.footer {
+    background-color: #f59ed8;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social {
+    display: flex;
+}
+
+.social-link {
+    color: #fff;
+    margin-right: 20px;
+    text-decoration: none;
+    
+}
+
+.social-link:hover {
+    color: #f94eb0;
+    text-decoration: underline;
+}
+
+.contact-info p {
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
