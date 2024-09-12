@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200..800&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,40 +9,23 @@
 body {
     font-family: 'Nunito', sans-serif;
     line-height: 1.6;
-    background-color: #ffffff;
+    background-color: #fff7fb;
     color: #333;
 }
 
-.framboesa-nick{
-    text-decoration: none;
-    color: #333;
-}
-
-.framboesa-nick:hover{
-    text-decoration: underline;
-    color: #f94eb0;
-}
-
-.moranguinho{
-    width: 400px; 
-    height: 400px;
-}
-
-/* Manter o cabeçalho fixo no topo da página */
 .header {
-    background-color: #f59ed8;
+    background-color: #fbcfe8;
     color: #fff;
     padding: 10px 0;
-    position: fixed; /* Fixa o cabeçalho no topo */
-    width: 100%; /* Garante que o cabeçalho ocupe toda a largura */
-    top: 0; /* Garante que o cabeçalho fique no topo */
-    left: 0; /* Garante que o cabeçalho fique alinhado à esquerda */
-    z-index: 1000; /* Garante que o cabeçalho fique sobre outros elementos */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
-/* Corrigir o espaçamento do conteúdo para não sobrepor o cabeçalho fixo */
 main {
-    margin-top: 70px; /* Ajuste o valor conforme a altura do cabeçalho */
+    margin-top: 80px;
 }
 
 .logo-site {
@@ -51,46 +34,30 @@ main {
     display: block;
 }
 
-.avatar-moranguinho{
-    width: 300px; 
-    height: 500px;
-}
-
-.avatar-limaozinho{
-    width: 400px; 
-    height: 600px;
-}
-
-.avatar-framboesa{
-    width: 400px; 
-    height: 500px;
-}
 .nav {
     display: flex;
-    justify-content: center; /* Centraliza os links de navegação horizontalmente */
+    justify-content: center;
 }
 
 .nav ul {
-    list-style-type: none; /* Remove os marcadores da lista */
+    list-style-type: none;
     display: flex;
     padding: 0;
 }
 
 .nav li {
-    margin-left: 20px; /* Espaçamento entre os links */
+    margin-left: 20px;
 }
 
 .nav a {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
-    font-family: 'Nunito', sans-serif;
 }
 
 .nav a:hover {
     color: #f94eb0;
     text-decoration: underline;
-    font-family: 'Nunito', sans-serif;
 }
 
 .section {
@@ -98,38 +65,29 @@ main {
     text-align: center;
 }
 
-.intro h1 {
-    font-family: 'Nunito', sans-serif;
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.intro p {
-    font-size: 18px;
-    color: #555;
-}
-
-.Flex-container {
+.flex-container {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     margin-top: 20px;
 }
 
 .box {
     background-color: #fff;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 12px;
     width: 30%;
-    box-shadow: 0 4px 8px rgba(247, 225, 247, 0.658);
-    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
 }
 
 .box:hover {
     transform: translateY(-10px);
+    background-color: #ffe4e6;
 }
 
 .box h2 {
-    font-family: 'Nunito', sans-serif;
     font-size: 24px;
     margin-bottom: 10px;
 }
@@ -140,7 +98,7 @@ main {
 }
 
 .footer {
-    background-color: #f59ed8;
+    background-color: #fbcfe8;
     color: #fff;
     padding: 20px;
     display: flex;
@@ -148,15 +106,10 @@ main {
     align-items: center;
 }
 
-.social {
-    display: flex;
-}
-
 .social-link {
     color: #fff;
     margin-right: 20px;
     text-decoration: none;
-    
 }
 
 .social-link:hover {
@@ -164,12 +117,8 @@ main {
     text-decoration: underline;
 }
 
-.contact-info p {
-    font-size: 14px;
-}
-
 @media (max-width: 768px) {
-    .content {
+    .flex-container {
         flex-direction: column;
         align-items: center;
     }
@@ -178,4 +127,10 @@ main {
         width: 80%;
         margin-bottom: 20px;
     }
+}
+.avatar-framboesa{
+    width: 450px;
+}
+.moranguinho{
+    width: 600px;
 }

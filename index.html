@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
+    <link rel="icon" href="./imagem/festa.jpg" type="image/jpg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moranguinho</title>
@@ -9,13 +10,13 @@
 <body>
     <header class="header">
         <div>
-            <img class= "logo-site" src="./imagem/logo.png" alt="Logo">
+            <img class="logo-site" src="./imagem/logo.png" alt="Logo">
         </div>
         <nav class="nav">
             <ul>
                 <li><a href="./portal.html">PORTAL</a></li>
                 <li><a href="./sobre.html">SOBRE</a></li>
-                <li><a href="./contatos.html">CONTATOS</a></li>
+                <li><a href="./contact.html">CONTATOS</a></li>
             </ul>
         </nav>
     </header>
@@ -24,21 +25,24 @@
             <div>
                 <img class="moranguinho" src="./imagem/Imagem2.jpg" alt="Moranguinho">
                 <h1 class="strawberry">Strawberry</h1>
-                <p>Bem-vindo(a) ao site da Moranguinho. Aqui temos como função nos aventurar no Universo da Moranguinho!</p>
-                <p>Você pode logo abaixo escolher um personagem da sua preferência, ou, ir nos links acima.</p>
+                <p>Bem-vindo(a) ao site da Moranguinho. Aqui nos aventuramos no Universo da Moranguinho!</p>
+                <p>Escolha seu personagem favorito abaixo ou explore pelos links acima.</p>
             </div>
-            <div class="Flex-container">
-                <div class="box">
-                    <h2><a class="framboesa-nick" href="./personas/moranguinho.html">Moranguinho</a></h2>
-                    <img class="avatar-moranguinho" src="./imagem/Persona1.jpg" alt="Persona3">
+            <div class="flex-container">
+                <div class="box" onclick="location.href='./personas/moranguinho.html'">
+                    <h2>Moranguinho</h2>
+                    <img class="avatar-moranguinho" src="./imagem/Persona1.jpg" alt="Moranguinho">
+                    <p>Moranguinho é uma menina doce que adora cuidar de seus amigos e fazer tortas deliciosas.</p>
                 </div>
-                <div class="box">
-                    <h2><a class="framboesa-nick" href="./personas/limaozinho.html">Limaozinho</a></h2>
-                    <img class="avatar-limaozinho" src="./imagem/Persona2.jpg" alt="Persona3">
+                <div class="box" onclick="location.href='./personas/limaozinho.html'">
+                    <h2>Limaozinho</h2>
+                    <img class="avatar-limaozinho" src="./imagem/Persona2.jpg" alt="Limaozinho">
+                    <p>Limaozinho é esperta e energética, sempre pronta para uma aventura refrescante.</p>
                 </div>
-                <div class="box">
-                    <h2><a class="framboesa-nick" href="./personas/framboesa.html">Framboesa</a></h2>
-                    <img class="avatar-framboesa" src="./imagem/Persona3.jpg" alt="Persona3">
+                <div class="box" onclick="location.href='./personas/framboesa.html'">
+                    <h2>Framboesa</h2>
+                    <img class="avatar-framboesa" src="./imagem/Persona3.jpg" alt="Framboesa">
+                    <p>Framboesa é criativa e adora desenhar, sempre colorindo a vida com suas ideias brilhantes.</p>
                 </div>
             </div>
         </section>

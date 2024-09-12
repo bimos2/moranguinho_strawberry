@@ -1,0 +1,85 @@
+/* Fonte importada do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff7fb;
+    color: #333;
+    text-align: center;
+}
+
+.header {
+    background-color: #fbcfe8;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    width: 120px;
+}
+
+.header h1 {
+    margin-top: 10px;
+    font-size: 36px;
+    color: #f94eb0;
+}
+
+.about-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-color: #fff;
+}
+
+.about-image {
+    flex: 1;
+    margin: 20px;
+}
+
+.moranguinho-img {
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.about-content {
+    flex: 1;
+    max-width: 600px;
+    text-align: left;
+}
+
+.about-content h2 {
+    font-size: 32px;
+    color: #f94eb0;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.footer {
+    background-color: #fbcfe8;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

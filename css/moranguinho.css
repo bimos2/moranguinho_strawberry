@@ -1,0 +1,40 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #fff7fb;
+    color: #333;
+    text-align: center;
+}
+
+.header {
+    background-color: #fbcfe8;
+    padding: 20px;
+    color: white;
+}
+
+.character-info {
+    margin: 40px auto;
+    width: 80%;
+}
+
+.character-info img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+.character-info h2 {
+    margin-top: 20px;
+    font-size: 28px;
+    color: #f94eb0;
+}
+
+.character-info p {
+    font-size: 18px;
+    color: #555;
+}
+
+.footer {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #fbcfe8;
+    color: white;
+}
