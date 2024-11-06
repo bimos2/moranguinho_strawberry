@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="./imagem/festa.png" type="image/jpg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato</title>
     <link rel="stylesheet" href="./css/contact.css">
@@ -16,7 +17,8 @@
             <h2>Fale Conosco</h2>
             <p>Se você tiver alguma dúvida, sugestão ou quiser saber mais sobre a Moranguinho, preencha o formulário abaixo. Vamos adorar ouvir você!</p>
             
-            <form class="contact-form" action="#" method="post">
+            <!-- Adicionando o ID e a URL do Formspree -->
+            <form id="contatoForm" action="https://formspree.io/f/mnnqdqor" method="POST">
                 <div class="form-group">
                     <label for="name">Nome:</label>
                     <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
@@ -40,5 +42,7 @@
     <footer class="footer">
         <p>2024 Beatriz Candido de Matos, projeto fictício Moranguinho</p>
     </footer>
+
+    <script src="js/formulario.js"></script> <!-- Certifique-se de que o caminho do JS está correto -->
 </body>
 </html>

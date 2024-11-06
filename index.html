@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <link rel="icon" href="./imagem/festa.jpg" type="image/jpg">
+    <link rel="icon" href="./imagem/festa.png" type="image/jpg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moranguinho</title>
@@ -9,21 +9,28 @@
 </head>
 <body>
     <header class="header">
-        <div>
-            <img class="logo-site" src="./imagem/logo.png" alt="Logo">
+        <div class="logo-container">
+            <img class="small-logo" src="./imagem/logo.png" alt="Logo">
         </div>
-        <nav class="nav">
-            <ul>
-                <li><a href="./portal.html">PORTAL</a></li>
-                <li><a href="./sobre.html">SOBRE</a></li>
-                <li><a href="./contact.html">CONTATOS</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <button class="navbar-toggler" id="toggleButton" aria-label="Toggle navigation">
+                <span class="hamburguer"></span>
+                <span class="hamburguer"></span>
+                <span class="hamburguer"></span>
+            </button>
+            <nav class="navbar" id="navbarNav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="./sobre.html" class="nav-link">SOBRE</a></li>
+                    <li class="nav-item"><a href="./portal.html" class="nav-link">PORTAL</a></li>
+                    <li class="nav-item"><a href="./contact.html" class="nav-link">CONTATOS</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
         <section class="section">
             <div>
-                <img class="moranguinho" src="./imagem/Imagem2.jpg" alt="Moranguinho">
+                <img class="moranguinho" src="./imagem/Imagem2.png" alt="Moranguinho">
                 <h1 class="strawberry">Strawberry</h1>
                 <p>Bem-vindo(a) ao site da Moranguinho. Aqui nos aventuramos no Universo da Moranguinho!</p>
                 <p>Escolha seu personagem favorito abaixo ou explore pelos links acima.</p>
@@ -51,7 +58,8 @@
         <div class="social">
             <a class="social-link" href="https://github.com/bimos2">GitHub</a>
         </div>
-        <p>2024 Beatriz Candido de Matos, projeto Site Ficticio</p>
+        <p>2024 Beatriz Candido de Matos </p>
     </footer>
+    <script src="./js/scrpit.js"></script>
 </body>
 </html>

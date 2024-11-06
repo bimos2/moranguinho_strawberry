@@ -6,6 +6,69 @@
     box-sizing: border-box;
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.nav-link.active {
+    color: #f94eb0; /* Cor desejada quando ativo */
+    font-weight: bold; /* Para destacar ainda mais */
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(14, 14, 14, 0.8);
+    text-align: center;
+    padding: 1.4rem 2rem;
+    width: 100%;
+    position: fixed;  /* Fixa o header no topo da página */
+    top: 0;           /* Garante que ele ficará no topo */
+    left: 0;
+    z-index: 1000;    /* Garante que o header ficará acima de outros elementos */
+}
+
+.nav {
+    margin-left: auto;
+}
+
+/* Estilo do menu principal */
+.nav-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-item {
+    margin-left: 20px;
+}
+
+.nav-link {
+    color: #4a5568;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.nav-link:hover {
+    color: #f94eb0;
+}
+
+/* Logo pequena */
+.logo-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.small-logo {
+    width: 100px;
+    height: auto;
+    border-radius: 50%; /* Se desejar uma logo circular */
+}
+
 body {
     font-family: 'Nunito', sans-serif;
     line-height: 1.6;
@@ -70,6 +133,7 @@ main {
     justify-content: space-around;
     flex-wrap: wrap;
     margin-top: 20px;
+    gap: 20px; /* Espaçamento entre os boxes */
 }
 
 .box {
@@ -117,20 +181,277 @@ main {
     text-decoration: underline;
 }
 
+.navbar-toggler{
+    display: none;
+}
+
+
+
+/* Responsividade para telas pequenas */
 @media (max-width: 768px) {
+    .hamburguer {
+        display: block;
+        width: 40px;
+        /* Aumentar a largura */
+        height: 4px;
+        /* Aumentar a altura */
+        background-color: #f94eb0;
+        margin: 6px 0;
+        /* Aumentar a margem entre os elementos do botão */
+        border-radius: 2px;
+        /* Bordas arredondadas */ 
+        transition: all 0.3s ease;
+    }
+
+    /* Ajusta o container principal */
+    .container {
+        max-width: 100%;
+        padding: 0 15px; /* Ajuste leve de padding para dar mais espaço */
+        flex-direction: column;
+        align-items: center; /* Alinha os itens no centro */
+    }
+    .moranguinho{
+        width: 340px;
+    }
+    .avatar-moranguinho{
+        width: 270px;
+    }
+    .avatar-limaozinho{
+        width: 270px;
+    }
+
+    .header {
+        padding: 40px 15px; /* Ajusta o padding do cabeçalho */
+        text-align: center; /* Centraliza o conteúdo */
+    }
+
+    /* Estilo do botão de hamburguer */
+    .navbar-toggler {
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 15px;
+        background-color: rgba(255, 255, 255, 0.8);
+        color: #ffffff;
+        font-size: 24px;
+        padding: 10px;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+    
+    .navbar-toggler:hover {
+        background-color: #ff40ac54;
+        transform: scale(1.1);
+    }
+
+    .navbar-toggler:active {
+        background-color: #ff6fc19f;
+        transform: scale(1);
+    }
+
+    /* Estilos para a lista de navegação */
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 2px 10px #fbcfe8;
+        z-index: 9;
+    }
+
+    .navbar.active .nav-list {
+        display: flex;
+    }
+
+    .nav-item {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    .nav-link {
+        padding: 15px;
+        display: block;
+        text-align: center;
+    }
+
+    /* Ajusta o título da banner */
+    .banner-title {
+        font-size: 6vw; /* Proporcional ao tamanho da tela */
+    }
+
+    .banner-description {
+        font-size: 4vw;
+        padding: 10px 20px;
+    }
+
+    /* Ajuste nas cartas de serviço */
+    .service-card {
+        width: 90%;
+        max-width: 300px;
+        margin: 20px auto; /* Adiciona espaçamento entre as cartas */
+    }
+
+    .service-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    /* Ajusta a imagem das cartas de serviço */
+    .service-image {
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 15px;
+    }
+
+    .service-title {
+        font-weight: bold;
+        font-size: 1.25rem;
+        margin-bottom: 10px;
+    }
+
+    .service-description {
+        color: #fff;
+    }
+
+    /* Mapa responsivo */
+    .map-container iframe {
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+    }
+
+    /* Rodapé */
+    .footer-container {
+        padding: 20px 10px;
+    }
+
+    .footer-title {
+        font-size: 1.25rem;
+    }
+
+    .hours-title {
+        font-size: 1.2rem;
+    }
+
+    /* Ajustes para os boxes */
     .flex-container {
         flex-direction: column;
         align-items: center;
+        gap: 20px;
+        width: 100%;
     }
 
     .box {
-        width: 80%;
-        margin-bottom: 20px;
+        width: 90%;
+        max-width: 350px;
+        margin: 0 auto;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    /* Logo menor em dispositivos móveis */
+    .small-logo {
+        width: 170px;
+    }
+
+    /* Ajustes no footer */
+    .footer {
+        background-color: #fbcfe8;
+        color: #fff;
+        padding: 20px 10px;
+        text-align: center;
+    }
+
+    .footer-logo {
+        border-radius: 30px;
+        width: 100px;
+    }
+
+    .footer-links {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .social-links {
+        margin: 20px 0;
+    }
+
+    .social-link {
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+    /* Ajuste nas horas */
+    .hours-title {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
     }
 }
-.avatar-framboesa{
-    width: 450px;
+
+/* Estilos para telas maiores */
+@media (min-width: 769px) {
+    .navbar {
+        display: flex;
+    }
+
+    .nav-list {
+        display: flex;
+        list-style: none;
+        padding: 0;
+    }
+
+    .nav-item {
+        margin-left: 20px;
+    }
+
+    .nav-link {
+        color: #4a5568;
+        text-decoration: none;
+        padding: 10px 15px;
+    }
+
+    .nav-link:hover {
+        color: #f94eb0;
+    }
 }
-.moranguinho{
-    width: 600px;
+
+/* Estilo do título da banner */
+.banner-title {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+/* Ajuste no botão de chamada à ação */
+.cta-button :active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+    background-color: #ffffff;
+}
+
+.cta-button:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
 }

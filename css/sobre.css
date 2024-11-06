@@ -60,6 +60,7 @@ body {
     flex: 1;
     max-width: 600px;
     text-align: left;
+    margin-top: 20px; /* Adiciona um pequeno espaço acima do conteúdo */
 }
 
 .about-content h2 {
@@ -82,4 +83,81 @@ body {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+/* Media Queries para Responsividade */
+
+/* Telas menores que 768px (Tablets e smartphones) */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 28px; /* Ajusta o tamanho do título */
+    }
+
+    .about-section {
+        flex-direction: column; /* Coloca a imagem e o conteúdo em coluna */
+        padding: 20px; /* Reduz o espaçamento interno */
+    }
+
+    .about-image {
+        margin: 10px;
+        flex: 0 0 100%; /* A imagem ocupa 100% da largura disponível */
+        display: flex;
+        justify-content: center;
+    }
+
+    .moranguinho-img {
+        width: 80%; /* Ajusta a largura da imagem para não ocupar toda a tela */
+        max-width: 300px; /* Define um limite de tamanho */
+    }
+
+    .about-content {
+        max-width: 90%; /* Ajusta a largura do conteúdo */
+        padding: 0 10px;
+        text-align: center; /* Centraliza o texto em telas menores */
+    }
+
+    .about-content h2 {
+        font-size: 26px; /* Ajusta o tamanho do subtítulo */
+    }
+
+    .about-content p {
+        font-size: 16px; /* Ajusta o tamanho do parágrafo */
+    }
+
+    .footer {
+        padding: 15px; /* Ajusta o espaçamento do rodapé */
+        position: relative; /* Remove o rodapé fixo em telas menores */
+    }
+}
+
+/* Telas menores que 480px (Smartphones muito pequenos) */
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 24px; /* Título menor em dispositivos muito pequenos */
+    }
+
+    .about-section {
+        padding: 10px;
+    }
+
+    .about-content h2 {
+        font-size: 22px;
+    }
+
+    .about-content p {
+        font-size: 14px; /* Tamanho de fonte reduzido */
+    }
+
+    .moranguinho-img {
+        width: 100%; /* A imagem ocupa 100% da tela */
+        max-width: 280px; /* Limite de tamanho da imagem */
+    }
+
+    .about-content {
+        max-width: 100%;
+    }
+
+    .footer {
+        padding: 10px; /* Ajusta o padding do rodapé para dispositivos muito pequenos */
+    }
 }

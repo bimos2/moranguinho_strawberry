@@ -7,6 +7,17 @@
     box-sizing: border-box;
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.nav-link.active {
+    color: #f94eb0; /* Cor desejada quando ativo */
+    font-weight: bold; /* Para destacar ainda mais */
+}
+
 body {
     font-family: 'Nunito', sans-serif;
     background-color: #fff0f6;
@@ -52,6 +63,7 @@ body {
     justify-content: space-around;
     gap: 20px;
     margin-top: 20px;
+    flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte em telas pequenas */
 }
 
 .highlight-item {
@@ -61,18 +73,14 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 30%;
     transition: transform 0.3s ease;
+    margin-bottom: 20px; /* Adicionado para melhorar o espaçamento */
 }
 
 .highlight-item:hover {
     transform: translateY(-10px);
 }
 
-.aventuras {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-.amigos{
+.aventuras, .amigos, .festa {
     width: 100%;
     border-radius: 8px;
     margin-bottom: 15px;
@@ -132,6 +140,68 @@ body {
     font-size: 14px;
 }
 
-.festa{
-    width: 350px;
+/* Ajustes para telas pequenas (smartphones) */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 36px; /* Tamanho menor no celular */
+    }
+
+    .header p {
+        font-size: 18px; /* Ajusta a fonte do texto */
+    }
+
+    .highlight-grid {
+        flex-direction: column; /* Coloca os itens em coluna em telas menores */
+        align-items: center; /* Alinha os itens no centro */
+    }
+
+    .highlight-item {
+        width: 80%; /* Os itens de destaque ocupam mais espaço */
+    }
+
+    .cta-section h2 {
+        font-size: 24px;
+    }
+
+    .cta-section p {
+        font-size: 16px;
+    }
+
+    .cta-btn {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+
+    .footer p {
+        font-size: 12px;
+    }
+}
+
+/* Ajustes para telas muito pequenas (ex: celulares de 320px de largura) */
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .header p {
+        font-size: 16px;
+    }
+
+    .highlight-item {
+        width: 90%; /* Ajusta ainda mais o tamanho dos itens de destaque */
+        margin-bottom: 10px; /* Menos espaço entre os itens */
+    }
+
+    .cta-section h2 {
+        font-size: 20px;
+    }
+
+    .cta-section p {
+        font-size: 14px;
+    }
+
+    .cta-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
 }
